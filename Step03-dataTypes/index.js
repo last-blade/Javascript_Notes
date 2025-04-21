@@ -21,3 +21,13 @@ console.log(typeof x); //Output: Object; 'null' toh primitive datatype hai, and 
 
 let y = undefined;
 console.log(typeof y); // Output: undefined
+
+const ID1 = Symbol("123");
+const ID2 = Symbol("123");
+console.log(ID1 == ID2)// Output: false; Symbol("123") creates a new and unique symbol every time you call it, even if the description is the same.
+
+// If you want the same symbol, use Symbol.for():
+const ID3 = Symbol.for("123");
+const ID4 = Symbol.for("123");
+
+console.log(ID3 == ID4); // true
