@@ -73,3 +73,8 @@ ho raha hai.
 
 myObj.greetings(); //OUTPUT: Hello user; ab 'undefined' print nahin ho raha hai kyoki ab main console.log ke andar call nahin kar raha hoon funciton ko.
 
+myObj.otherFunction = function(){
+    console.log(`Hello my name is ${this.name}`);
+}
+
+myObj.otherFunction(); //OUTPUT: Hello my name is Prashant
