@@ -32,3 +32,18 @@ function myFun(){
 console.log(name); // OUTPUT: ReferenceError: name is not defined
 console.log(myname); // OUTPUT: ReferenceError: myname is not defined
 console.log(fullname); // OUTPUT: ReferenceError: fullname is not defined
+
+
+//----------------------------------------------------------practice----------------------------------------------------------------------
+
+if(true){
+    const username = "prasahnt";
+    if(username === "prashant"){
+        const gitHubId = "last-blade";
+        console.log(username + gitHubId);// nor error, simply print.
+    }
+
+    console.log(gitHubId); //reference error
+}
+
+console.log(username); //reference error
