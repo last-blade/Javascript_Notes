@@ -26,6 +26,17 @@ console.log(val); // 7
 val = undefined ?? 10 ?? 20;
 console.log(val); // 10
 
+val = false ?? 10;
+console.log(val); // OUTPUT: false
+
+val = true ?? 10;
+console.log(val); // OUTPUT: true
+
+val = "" ?? 10;
+console.log(val); // OUTPUT: ""
+
+//conclusinon: yeh operator (??) kewal null and undefined par hi kaam karta hai, true, false, empty string inn sab par kaam nahin karta.
+
 /*
 The Nullish Coalescing Operator (??) returns the right-hand value only if the left-hand value is null or undefined.
 
