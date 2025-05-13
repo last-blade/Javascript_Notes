@@ -21,6 +21,10 @@ raha hai "username", par humein toh "person" function ke this mein set karna hai
     '.call' keyword kaa use karna hai or 'person' function kaa 'this' bhi argument mein send karna hai, see below
 
     const p2 = new person(this, username);
+
+--> bina ".call" ke hum "this" ko as an argument send nahin kar sakte thay, jaise humne neeche 'hello.call(this, username)' mein kiya hua hai,
+    bina, aur "this" jo hai "user" function kaa send hua hai, or fir yeh this jo hai oopar "hello" wale function ke paas gaya hai
+    and then wahan jo hai ab "user" function kaa context use hoga, naa ki "hello" function kaa, toh yeh faayeda hai ".call" kaa.
 */
 
 function user(username, age){
