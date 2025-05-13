@@ -15,6 +15,11 @@ sabse oopar jo function banaya hai "hello()" naam se, hum uss function ke "this"
 "hello" function mein jo this likha hua hai woh "hello" function context hi lega, i.e., hello function ke this mein set ho 
 raha hai "username", par humein toh "person" function ke this mein set karna hai 'username'.
 
+❌ Why username isn't set?
+When you call hello(username), it's a regular function call, so this inside hello refers to global object (in non-strict mode) or undefined (in strict mode).
+
+So this.username = username runs in the wrong context — not in the person()'s object.
+
 ! Solution below:-
 
 --> oopar jo function likha hua hai 'person', usmein maine 'hello' function ko execute karaya hai, toh execute karte time humein
