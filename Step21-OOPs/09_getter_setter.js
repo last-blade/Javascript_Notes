@@ -81,3 +81,39 @@ const u2 = new User2("prashant@google.com", "1234@")
 
 console.log(u2); // OUTPUT: User2 { password: '1234@', _email: 'prashant@google.com' }
 console.log(u2.email); // OUTPUT: prashant@google.com
+
+
+//!-------------------------------------------yahi same kaam function se bhi ho sakta hai bina class banaye----------------------------------
+
+function Userr(username, email) {
+    // First define getters/setters
+    Object.defineProperty(this, "email", {
+        get: function () {
+            return this._email;
+        },
+        set: function (value) {
+            this._email = value;
+        },
+    });
+
+    Object.defineProperty(this, "username", {
+        get: function () {
+            return this._username;
+        },
+        set: function (value) {
+            this._username = value;
+        },
+    });
+
+    // Then assign values to trigger the setters
+    this.username = username;
+    this.email = email;
+}
+
+const u3 = new Userr("prashant", "prashant@google.com");
+console.log(u3.username); // ✅ Output: prashant
+console.log(u3.email);    // ✅ Output: prashant@google.com
+
+
+//!-----------------------------------yahi same kaam object se bhi ho sakta hai bina class or function banaye----------------------------------
+
